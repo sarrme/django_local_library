@@ -1,0 +1,11 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{%if bookinstance_list %}
+<ul>
+{% for bookins in bookinstance_list %}
+<li class="{% if bookins.is_overdue %}text-danger{% endif %}"><a href="{% url 'book-detail' bookins.book.pk %}">{{bookins.book.title}} </a>({{bookins.due_back}})- {{bookins.borrower}} <a href="{% url 'renew-book-librarian' bookins.id %}">Renew</a></li>
+{% endfor %}
+</ul>
+{%endif%}
+{% endblock %}
