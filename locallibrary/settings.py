@@ -25,7 +25,7 @@ SECRET_KEY = '^y*qw(uzqik1seknw1&vwo!m@j#^24_%vwhz+1mipx%*)wg%hh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['lit-stream-70727.herokuapp.com']
 
 
 # Application definition
